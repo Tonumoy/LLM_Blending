@@ -1,6 +1,6 @@
 # Model Merging with MergeKit
 
-This repository provides a Jupyter notebook for merging large language models using the [MergeKit](https://github.com/mergekit) tool. It is designed for users familiar with machine learning model management, specifically those working with models hosted on the Hugging Face Hub.
+This repository provides a Jupyter notebook for merging large language models using the [MergeKit](https://github.com/arcee-ai/mergekit) tool. It is designed for users familiar with machine learning model management, specifically those working with models hosted on the Hugging Face Hub.
 
 ## Features
 
