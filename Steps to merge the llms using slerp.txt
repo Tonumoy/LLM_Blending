@@ -1,0 +1,35 @@
+# Explanation of Steps
+
+1. !python -m pip install --upgrade pip
+This command updates the Python package installer (pip) to the latest version.
+
+2. git clone https://github.com/arcee-ai/mergekit
+This command clones the "mergekit" repository from the "arcee-ai" GitHub organization to the local machine.
+
+3. %cd mergekit
+This command changes the current working directory to the "mergekit" directory that was just cloned.
+
+4. !pip install -q -e .
+This command installs the "mergekit" package in editable mode (-e) from the current directory (.) using pip. The `-q` flag suppresses output.
+
+5. !pip install -qU transformers huggingface_hub PyYAML
+This command installs (or upgrades if already installed) the "transformers," "huggingface_hub," and "PyYAML" packages using pip. The `-qU` flags suppress output and upgrade the packages if they're already installed.
+
+6. yaml_config variable definition
+The following lines define a Python string variable `yaml_config` containing a YAML configuration for the "mergekit" tool.
+
+7. print("Writing YAML config to 'config.yaml'...")
+This line prints a message indicating that the YAML configuration will be written to a file named "config.yaml."
+
+8. Try/except block to write config.yaml
+The `try`/`except` block attempts to open a file named "config.yaml" in write mode and write the contents of the `yaml_config` variable to it. If successful, it prints a message indicating that the file was written successfully. If an exception occurs, it prints an error message.
+
+9. !mergekit-yaml config.yaml merge --copy-tokenizer --allow-crimes --out-shard-size 1B --lazy-unpickle --trust-remote-code
+This command runs the "mergekit" tool with the specified arguments:
+- `config.yaml` is the YAML configuration file to use.
+- `merge` is the subcommand to merge models.
+- `--copy-tokenizer` copies the tokenizer from the base model.
+- `--allow-crimes` allows potential crimes (unsure what this refers to).
+- `--out-shard-size 1B` sets the output shard size to 1B (possibly referring to file size or model size).
+- `--lazy-unpickle` uses lazy unpickling (possibly a performance optimization).
+- `--trust-remote-code` trusts remote code (potentially unsafe).
